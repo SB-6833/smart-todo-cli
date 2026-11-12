@@ -1,0 +1,401 @@
+{
+  "checks": [
+    {
+      "argv": [
+        "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\.venv\\Scripts\\python.exe",
+        "-m",
+        "compileall",
+        "-q",
+        "smart_todo",
+        "tests"
+      ],
+      "command": "\"C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\.venv\\Scripts\\python.exe\" -m compileall -q smart_todo tests",
+      "expected": {
+        "exit_code": 0
+      },
+      "name": "python_compileall",
+      "observed": {
+        "error": null,
+        "exit_code": 0,
+        "required_report_present": true
+      },
+      "output_artifacts": {
+        "stderr_binary": "after-repair/checks/python_compileall.stderr.bin",
+        "stderr_text": "after-repair/checks/python_compileall.stderr.txt",
+        "stdout_binary": "after-repair/checks/python_compileall.stdout.bin",
+        "stdout_text": "after-repair/checks/python_compileall.stdout.txt"
+      },
+      "passed": true,
+      "tool_version": "3.13.2",
+      "working_directory": "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\smart-todo"
+    },
+    {
+      "argv": [
+        "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\.venv\\Scripts\\ruff.exe",
+        "check",
+        "--output-format",
+        "json",
+        "smart_todo",
+        "tests"
+      ],
+      "command": "\"C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\.venv\\Scripts\\ruff.exe\" check --output-format json smart_todo tests",
+      "expected": {
+        "exit_code": 0,
+        "findings": 0
+      },
+      "name": "ruff_lint",
+      "observed": {
+        "error": null,
+        "exit_code": 0,
+        "findings": 0,
+        "required_report_present": true
+      },
+      "output_artifacts": {
+        "json_report": "after-repair/checks/ruff.json",
+        "stderr_binary": "after-repair/checks/ruff_lint.stderr.bin",
+        "stderr_text": "after-repair/checks/ruff_lint.stderr.txt",
+        "stdout_binary": "after-repair/checks/ruff_lint.stdout.bin",
+        "stdout_text": "after-repair/checks/ruff_lint.stdout.txt"
+      },
+      "passed": true,
+      "tool_version": "0.17.4",
+      "working_directory": "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\smart-todo"
+    },
+    {
+      "argv": [
+        "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\.venv\\Scripts\\bandit.exe",
+        "-r",
+        "smart_todo",
+        "--format",
+        "json"
+      ],
+      "command": "\"C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\.venv\\Scripts\\bandit.exe\" -r smart_todo --format json",
+      "expected": {
+        "exit_code": 0,
+        "findings": 0
+      },
+      "name": "bandit_security",
+      "observed": {
+        "error": null,
+        "exit_code": 0,
+        "findings": 0,
+        "required_report_present": true
+      },
+      "output_artifacts": {
+        "json_report": "after-repair/checks/bandit.json",
+        "stderr_binary": "after-repair/checks/bandit_security.stderr.bin",
+        "stderr_text": "after-repair/checks/bandit_security.stderr.txt",
+        "stdout_binary": "after-repair/checks/bandit_security.stdout.bin",
+        "stdout_text": "after-repair/checks/bandit_security.stdout.txt"
+      },
+      "passed": true,
+      "tool_version": "1.9.4",
+      "working_directory": "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\smart-todo"
+    },
+    {
+      "argv": [
+        "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/unit",
+        "--junitxml=C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\smart-todo\\validation-artifacts\\phase7-20260605-01\\after-repair\\checks/pytest-unit.xml"
+      ],
+      "command": "\"C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\.venv\\Scripts\\python.exe\" -m pytest -q tests/unit \"--junitxml=C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\smart-todo\\validation-artifacts\\phase7-20260605-01\\after-repair\\checks/pytest-unit.xml\"",
+      "expected": {
+        "errors": 0,
+        "exit_code": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests_collected": ">0",
+        "xfails": 0
+      },
+      "name": "pytest_unit",
+      "observed": {
+        "error": null,
+        "errors": 0,
+        "exit_code": 0,
+        "failures": 0,
+        "required_report_present": true,
+        "skipped": 0,
+        "test_case_ids": [
+          "tests.unit.test_service::test_add_uses_unique_ids_defaults_and_persists_normalized_values",
+          "tests.unit.test_service::test_any_supported_status_can_transition_to_any_other[Completed-Completed]",
+          "tests.unit.test_service::test_any_supported_status_can_transition_to_any_other[Completed-In Progress]",
+          "tests.unit.test_service::test_any_supported_status_can_transition_to_any_other[Completed-Pending]",
+          "tests.unit.test_service::test_any_supported_status_can_transition_to_any_other[In Progress-Completed]",
+          "tests.unit.test_service::test_any_supported_status_can_transition_to_any_other[In Progress-In Progress]",
+          "tests.unit.test_service::test_any_supported_status_can_transition_to_any_other[In Progress-Pending]",
+          "tests.unit.test_service::test_any_supported_status_can_transition_to_any_other[Pending-Completed]",
+          "tests.unit.test_service::test_any_supported_status_can_transition_to_any_other[Pending-In Progress]",
+          "tests.unit.test_service::test_any_supported_status_can_transition_to_any_other[Pending-Pending]",
+          "tests.unit.test_service::test_blank_title_is_rejected_when_adding",
+          "tests.unit.test_service::test_delete_persists_removal_without_reusing_the_deleted_id",
+          "tests.unit.test_service::test_filter_by_tag_matches_exactly_ignoring_case_and_whitespace",
+          "tests.unit.test_service::test_filter_by_tag_returns_empty_list_when_there_are_no_matches",
+          "tests.unit.test_service::test_invalid_task_ids_are_rejected_without_changing_state[delete--1]",
+          "tests.unit.test_service::test_invalid_task_ids_are_rejected_without_changing_state[delete-0]",
+          "tests.unit.test_service::test_invalid_task_ids_are_rejected_without_changing_state[delete-1]",
+          "tests.unit.test_service::test_invalid_task_ids_are_rejected_without_changing_state[delete-True]",
+          "tests.unit.test_service::test_invalid_task_ids_are_rejected_without_changing_state[update--1]",
+          "tests.unit.test_service::test_invalid_task_ids_are_rejected_without_changing_state[update-0]",
+          "tests.unit.test_service::test_invalid_task_ids_are_rejected_without_changing_state[update-1]",
+          "tests.unit.test_service::test_invalid_task_ids_are_rejected_without_changing_state[update-True]",
+          "tests.unit.test_service::test_invalid_updates_do_not_change_task_or_file[priority-Urgent]",
+          "tests.unit.test_service::test_invalid_updates_do_not_change_task_or_file[status-Started]",
+          "tests.unit.test_service::test_invalid_updates_do_not_change_task_or_file[tags-value3]",
+          "tests.unit.test_service::test_invalid_updates_do_not_change_task_or_file[title- \\t ]",
+          "tests.unit.test_service::test_list_tasks_returns_all_saved_fields",
+          "tests.unit.test_service::test_missing_task_id_does_not_change_memory_or_disk[delete]",
+          "tests.unit.test_service::test_missing_task_id_does_not_change_memory_or_disk[update]",
+          "tests.unit.test_service::test_save_failure_does_not_publish_a_delete",
+          "tests.unit.test_service::test_save_failure_does_not_publish_an_add_or_update",
+          "tests.unit.test_service::test_saved_tasks_are_available_to_a_reopened_service",
+          "tests.unit.test_service::test_sort_by_priority_is_stable_and_does_not_change_saved_order",
+          "tests.unit.test_service::test_update_changes_requested_fields_and_preserves_id",
+          "tests.unit.test_service::test_update_of_one_field_preserves_the_other_fields",
+          "tests.unit.test_storage::test_failed_replace_preserves_previous_file_and_cleans_temporary_file",
+          "tests.unit.test_storage::test_load_rejects_invalid_existing_data_without_overwriting[[]]",
+          "tests.unit.test_storage::test_load_rejects_invalid_existing_data_without_overwriting[contents5]",
+          "tests.unit.test_storage::test_load_rejects_invalid_existing_data_without_overwriting[contents6]",
+          "tests.unit.test_storage::test_load_rejects_invalid_existing_data_without_overwriting[contents7]",
+          "tests.unit.test_storage::test_load_rejects_invalid_existing_data_without_overwriting[{\"schema_version\": 1, \"next_id\": 1, \"tasks\": [], \"extra\": true}]",
+          "tests.unit.test_storage::test_load_rejects_invalid_existing_data_without_overwriting[{\"schema_version\": 1, \"next_id\": true, \"tasks\": []}]",
+          "tests.unit.test_storage::test_load_rejects_invalid_existing_data_without_overwriting[{\"schema_version\": 2, \"next_id\": 1, \"tasks\": []}]",
+          "tests.unit.test_storage::test_load_rejects_invalid_existing_data_without_overwriting[{not json]",
+          "tests.unit.test_storage::test_load_reports_read_errors_instead_of_returning_empty_tasks",
+          "tests.unit.test_storage::test_missing_file_loads_as_an_empty_first_run",
+          "tests.unit.test_storage::test_store_round_trips_tasks_and_next_id",
+          "tests.unit.test_storage::test_task_snapshots_persist_add_update_delete_and_id_counter",
+          "tests.unit.test_validation::test_normalize_tags_accepts_no_tags",
+          "tests.unit.test_validation::test_normalize_tags_rejects_invalid_containers_or_values[None]",
+          "tests.unit.test_validation::test_normalize_tags_rejects_invalid_containers_or_values[tags2]",
+          "tests.unit.test_validation::test_normalize_tags_rejects_invalid_containers_or_values[work]",
+          "tests.unit.test_validation::test_normalize_tags_trims_discards_empty_and_deduplicates_case_insensitively",
+          "tests.unit.test_validation::test_normalize_title_rejects_blank_or_non_string_values[  ]",
+          "tests.unit.test_validation::test_normalize_title_rejects_blank_or_non_string_values[42]",
+          "tests.unit.test_validation::test_normalize_title_rejects_blank_or_non_string_values[None]",
+          "tests.unit.test_validation::test_normalize_title_rejects_blank_or_non_string_values[\\t\\n]",
+          "tests.unit.test_validation::test_normalize_title_rejects_blank_or_non_string_values[]",
+          "tests.unit.test_validation::test_normalize_title_trims_surrounding_whitespace",
+          "tests.unit.test_validation::test_task_from_record_builds_a_validated_task",
+          "tests.unit.test_validation::test_task_from_record_rejects_invalid_record_shapes[not a task record]",
+          "tests.unit.test_validation::test_task_from_record_rejects_invalid_record_shapes[record0]",
+          "tests.unit.test_validation::test_task_from_record_rejects_invalid_record_shapes[record1]",
+          "tests.unit.test_validation::test_validate_positive_id_accepts_positive_integers[1-1]",
+          "tests.unit.test_validation::test_validate_positive_id_accepts_positive_integers[12-12]",
+          "tests.unit.test_validation::test_validate_positive_id_rejects_invalid_values[-1]",
+          "tests.unit.test_validation::test_validate_positive_id_rejects_invalid_values[0]",
+          "tests.unit.test_validation::test_validate_positive_id_rejects_invalid_values[1]",
+          "tests.unit.test_validation::test_validate_positive_id_rejects_invalid_values[None]",
+          "tests.unit.test_validation::test_validate_positive_id_rejects_invalid_values[True]",
+          "tests.unit.test_validation::test_validate_priority_accepts_only_supported_values[High-High]",
+          "tests.unit.test_validation::test_validate_priority_accepts_only_supported_values[Low-Low]",
+          "tests.unit.test_validation::test_validate_priority_accepts_only_supported_values[Medium-Medium]",
+          "tests.unit.test_validation::test_validate_priority_rejects_unsupported_values[ high]",
+          "tests.unit.test_validation::test_validate_priority_rejects_unsupported_values[None]",
+          "tests.unit.test_validation::test_validate_priority_rejects_unsupported_values[]",
+          "tests.unit.test_validation::test_validate_priority_rejects_unsupported_values[urgent]",
+          "tests.unit.test_validation::test_validate_status_accepts_only_supported_values[Completed-Completed]",
+          "tests.unit.test_validation::test_validate_status_accepts_only_supported_values[In Progress-In Progress]",
+          "tests.unit.test_validation::test_validate_status_accepts_only_supported_values[Pending-Pending]",
+          "tests.unit.test_validation::test_validate_status_rejects_unsupported_values[None]",
+          "tests.unit.test_validation::test_validate_status_rejects_unsupported_values[Started]",
+          "tests.unit.test_validation::test_validate_status_rejects_unsupported_values[]",
+          "tests.unit.test_validation::test_validate_status_rejects_unsupported_values[pending]"
+        ],
+        "tests_collected": 84,
+        "xfails": 0
+      },
+      "output_artifacts": {
+        "junit_report": "after-repair/checks/pytest-unit.xml",
+        "stderr_binary": "after-repair/checks/pytest_unit.stderr.bin",
+        "stderr_text": "after-repair/checks/pytest_unit.stderr.txt",
+        "stdout_binary": "after-repair/checks/pytest_unit.stdout.bin",
+        "stdout_text": "after-repair/checks/pytest_unit.stdout.txt"
+      },
+      "passed": true,
+      "tool_version": "3.13.2",
+      "working_directory": "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\smart-todo"
+    },
+    {
+      "argv": [
+        "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/cli",
+        "tests/contract",
+        "--junitxml=C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\smart-todo\\validation-artifacts\\phase7-20260605-01\\after-repair\\checks/pytest-cli-contract.xml"
+      ],
+      "command": "\"C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\.venv\\Scripts\\python.exe\" -m pytest -q tests/cli tests/contract \"--junitxml=C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\smart-todo\\validation-artifacts\\phase7-20260605-01\\after-repair\\checks/pytest-cli-contract.xml\"",
+      "expected": {
+        "errors": 0,
+        "exit_code": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests_collected": ">0",
+        "xfails": 0
+      },
+      "name": "pytest_cli_contract",
+      "observed": {
+        "error": null,
+        "errors": 0,
+        "exit_code": 0,
+        "failures": 0,
+        "required_report_present": true,
+        "skipped": 0,
+        "test_case_ids": [
+          "tests.cli.test_cli::test_add_and_view_prompt_and_display_all_task_fields",
+          "tests.cli.test_cli::test_add_reports_success_only_after_saved_data_is_readable",
+          "tests.cli.test_cli::test_blank_filter_tag_is_rejected_without_changing_saved_data",
+          "tests.cli.test_cli::test_delete_cancel_leaves_task_unchanged",
+          "tests.cli.test_cli::test_delete_confirmation_removes_task",
+          "tests.cli.test_cli::test_empty_list_view_and_sort_explain_that_there_are_no_tasks",
+          "tests.cli.test_cli::test_filter_by_tag_displays_only_exact_case_insensitive_matches",
+          "tests.cli.test_cli::test_filter_success_identifies_the_matching_tag",
+          "tests.cli.test_cli::test_filter_with_no_matches_gives_clear_feedback",
+          "tests.cli.test_cli::test_invalid_menu_choice_and_missing_ids_are_reported",
+          "tests.cli.test_cli::test_invalid_priority_and_blank_title_leave_saved_data_unchanged",
+          "tests.cli.test_cli::test_invalid_status_is_reported_without_changing_saved_data",
+          "tests.cli.test_cli::test_numbered_menu_exposes_crud_filter_and_sort_operations",
+          "tests.cli.test_cli::test_save_failures_are_reported_without_changing_saved_data[add]",
+          "tests.cli.test_cli::test_save_failures_are_reported_without_changing_saved_data[delete]",
+          "tests.cli.test_cli::test_save_failures_are_reported_without_changing_saved_data[update]",
+          "tests.cli.test_cli::test_sort_by_priority_displays_stably_without_changing_saved_order",
+          "tests.cli.test_cli::test_unexpected_errors_are_not_silently_swallowed",
+          "tests.cli.test_cli::test_update_and_delete_report_success_only_after_persistence[delete]",
+          "tests.cli.test_cli::test_update_and_delete_report_success_only_after_persistence[update]",
+          "tests.cli.test_cli::test_update_prompts_for_each_editable_field_and_preserves_task_id",
+          "tests.contract.test_task_file_contract::test_default_task_file_is_anchored_to_the_project_location",
+          "tests.contract.test_task_file_contract::test_saved_file_uses_the_versioned_json_contract",
+          "tests.contract.test_terminal_contract::test_module_filter_and_sort_preserve_the_task_file_order",
+          "tests.contract.test_terminal_contract::test_module_launches_crud_menu_from_an_isolated_project_copy",
+          "tests.contract.test_terminal_contract::test_module_reports_invalid_task_data_without_overwriting_it"
+        ],
+        "tests_collected": 26,
+        "xfails": 0
+      },
+      "output_artifacts": {
+        "junit_report": "after-repair/checks/pytest-cli-contract.xml",
+        "stderr_binary": "after-repair/checks/pytest_cli_contract.stderr.bin",
+        "stderr_text": "after-repair/checks/pytest_cli_contract.stderr.txt",
+        "stdout_binary": "after-repair/checks/pytest_cli_contract.stdout.bin",
+        "stdout_text": "after-repair/checks/pytest_cli_contract.stdout.txt"
+      },
+      "passed": true,
+      "tool_version": "3.13.2",
+      "working_directory": "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\smart-todo"
+    }
+  ],
+  "configuration_sha256": "73b8464cf6e01d3ebd7b407e4456227d3a89e9cc66456f2b2f83b8fcf9e93469",
+  "created_at_utc": "2026-11-11T19:19:52+00:00",
+  "integrity_gates": {
+    "check_configuration_matches_initial": true,
+    "initial_snapshot_valid": true,
+    "policy_and_configuration_unchanged": true
+  },
+  "overall": "PASS",
+  "phase": "after-repair",
+  "preflight_passed": true,
+  "project_root": "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\smart-todo",
+  "python_executable": "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\.venv\\Scripts\\python.exe",
+  "repair_status": "Post-repair validation run; inspect changed-file hashes and evidence.",
+  "run_id": "phase7-20260605-01",
+  "tool_versions": {
+    "bandit": {
+      "argv": [
+        "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\.venv\\Scripts\\bandit.exe",
+        "--version"
+      ],
+      "command": "\"C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\.venv\\Scripts\\bandit.exe\" --version",
+      "error": null,
+      "exit_code": 0,
+      "expected_version": "1.9.4",
+      "observed_version": "1.9.4",
+      "output_files": {
+        "stderr_binary": "version-bandit.stderr.bin",
+        "stderr_text": "version-bandit.stderr.txt",
+        "stdout_binary": "version-bandit.stdout.bin",
+        "stdout_text": "version-bandit.stdout.txt"
+      },
+      "passed": true,
+      "working_directory": "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\smart-todo"
+    },
+    "pytest": {
+      "argv": [
+        "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "--version"
+      ],
+      "command": "\"C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\.venv\\Scripts\\python.exe\" -m pytest --version",
+      "error": null,
+      "exit_code": 0,
+      "expected_version": "9.2.0",
+      "observed_version": "9.2.0",
+      "output_files": {
+        "stderr_binary": "version-pytest.stderr.bin",
+        "stderr_text": "version-pytest.stderr.txt",
+        "stdout_binary": "version-pytest.stdout.bin",
+        "stdout_text": "version-pytest.stdout.txt"
+      },
+      "passed": true,
+      "working_directory": "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\smart-todo"
+    },
+    "python": {
+      "argv": [
+        "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\.venv\\Scripts\\python.exe",
+        "--version"
+      ],
+      "command": "\"C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\.venv\\Scripts\\python.exe\" --version",
+      "error": null,
+      "exit_code": 0,
+      "expected_version": ">=3.11",
+      "observed_version": "3.13.2",
+      "output_files": {
+        "stderr_binary": "version-python.stderr.bin",
+        "stderr_text": "version-python.stderr.txt",
+        "stdout_binary": "version-python.stdout.bin",
+        "stdout_text": "version-python.stdout.txt"
+      },
+      "passed": true,
+      "working_directory": "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\smart-todo"
+    },
+    "requirements_pins": {
+      "error": null,
+      "expected": {
+        "bandit": "1.9.4",
+        "pytest": "9.2.0",
+        "ruff": "0.17.4"
+      },
+      "observed": {
+        "bandit": "1.9.4",
+        "pytest": "9.2.0",
+        "ruff": "0.17.4"
+      },
+      "passed": true
+    },
+    "ruff": {
+      "argv": [
+        "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\.venv\\Scripts\\ruff.exe",
+        "--version"
+      ],
+      "command": "\"C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\.venv\\Scripts\\ruff.exe\" --version",
+      "error": null,
+      "exit_code": 0,
+      "expected_version": "0.17.4",
+      "observed_version": "0.17.4",
+      "output_files": {
+        "stderr_binary": "version-ruff.stderr.bin",
+        "stderr_text": "version-ruff.stderr.txt",
+        "stdout_binary": "version-ruff.stdout.bin",
+        "stdout_text": "version-ruff.stdout.txt"
+      },
+      "passed": true,
+      "working_directory": "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\smart-todo"
+    }
+  },
+  "validator_sha256": "4783c27ba60b3e0a55aa274904caedc07be83bcfd910a3c5ce206ac7bf28c8a7",
+  "working_directory": "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\smart-todo"
+}

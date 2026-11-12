@@ -1,0 +1,283 @@
+{
+  "checks": [
+    {
+      "argv": [
+        "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\.venv\\Scripts\\python.exe",
+        "-m",
+        "compileall",
+        "-q",
+        "smart_todo",
+        "tests"
+      ],
+      "command": "\"C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\.venv\\Scripts\\python.exe\" -m compileall -q smart_todo tests",
+      "expected": {
+        "exit_code": 0
+      },
+      "name": "python_compileall",
+      "observed": {
+        "error": null,
+        "exit_code": 0,
+        "required_report_present": true
+      },
+      "output_artifacts": {
+        "stderr_binary": "before-repair/checks/python_compileall.stderr.bin",
+        "stderr_text": "before-repair/checks/python_compileall.stderr.txt",
+        "stdout_binary": "before-repair/checks/python_compileall.stdout.bin",
+        "stdout_text": "before-repair/checks/python_compileall.stdout.txt"
+      },
+      "passed": true,
+      "tool_version": "3.13.2",
+      "working_directory": "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\smart-todo"
+    },
+    {
+      "argv": [
+        "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\.venv\\Scripts\\ruff.exe",
+        "check",
+        "--output-format",
+        "json",
+        "smart_todo",
+        "tests"
+      ],
+      "command": "\"C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\.venv\\Scripts\\ruff.exe\" check --output-format json smart_todo tests",
+      "expected": {
+        "exit_code": 0,
+        "findings": 0
+      },
+      "name": "ruff_lint",
+      "observed": {
+        "error": null,
+        "exit_code": 1,
+        "findings": 1,
+        "required_report_present": true
+      },
+      "output_artifacts": {
+        "json_report": "before-repair/checks/ruff.json",
+        "stderr_binary": "before-repair/checks/ruff_lint.stderr.bin",
+        "stderr_text": "before-repair/checks/ruff_lint.stderr.txt",
+        "stdout_binary": "before-repair/checks/ruff_lint.stdout.bin",
+        "stdout_text": "before-repair/checks/ruff_lint.stdout.txt"
+      },
+      "passed": false,
+      "tool_version": "0.17.4",
+      "working_directory": "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\smart-todo"
+    },
+    {
+      "argv": [
+        "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\.venv\\Scripts\\bandit.exe",
+        "-r",
+        "smart_todo",
+        "--format",
+        "json"
+      ],
+      "command": "\"C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\.venv\\Scripts\\bandit.exe\" -r smart_todo --format json",
+      "expected": {
+        "exit_code": 0,
+        "findings": 0
+      },
+      "name": "bandit_security",
+      "observed": {
+        "error": null,
+        "exit_code": 0,
+        "findings": 0,
+        "required_report_present": true
+      },
+      "output_artifacts": {
+        "json_report": "before-repair/checks/bandit.json",
+        "stderr_binary": "before-repair/checks/bandit_security.stderr.bin",
+        "stderr_text": "before-repair/checks/bandit_security.stderr.txt",
+        "stdout_binary": "before-repair/checks/bandit_security.stdout.bin",
+        "stdout_text": "before-repair/checks/bandit_security.stdout.txt"
+      },
+      "passed": true,
+      "tool_version": "1.9.4",
+      "working_directory": "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\smart-todo"
+    },
+    {
+      "argv": [
+        "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/unit",
+        "--junitxml=C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\smart-todo\\validation-artifacts\\phase7-20260605-01\\before-repair\\checks/pytest-unit.xml"
+      ],
+      "command": "\"C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\.venv\\Scripts\\python.exe\" -m pytest -q tests/unit \"--junitxml=C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\smart-todo\\validation-artifacts\\phase7-20260605-01\\before-repair\\checks/pytest-unit.xml\"",
+      "expected": {
+        "errors": 0,
+        "exit_code": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests_collected": ">0",
+        "xfails": 0
+      },
+      "name": "pytest_unit",
+      "observed": {
+        "error": null,
+        "errors": 0,
+        "exit_code": 0,
+        "failures": 0,
+        "required_report_present": true,
+        "skipped": 0,
+        "tests_collected": 84,
+        "xfails": 0
+      },
+      "output_artifacts": {
+        "junit_report": "before-repair/checks/pytest-unit.xml",
+        "stderr_binary": "before-repair/checks/pytest_unit.stderr.bin",
+        "stderr_text": "before-repair/checks/pytest_unit.stderr.txt",
+        "stdout_binary": "before-repair/checks/pytest_unit.stdout.bin",
+        "stdout_text": "before-repair/checks/pytest_unit.stdout.txt"
+      },
+      "passed": true,
+      "tool_version": "3.13.2",
+      "working_directory": "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\smart-todo"
+    },
+    {
+      "argv": [
+        "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/cli",
+        "tests/contract",
+        "--junitxml=C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\smart-todo\\validation-artifacts\\phase7-20260605-01\\before-repair\\checks/pytest-cli-contract.xml"
+      ],
+      "command": "\"C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\.venv\\Scripts\\python.exe\" -m pytest -q tests/cli tests/contract \"--junitxml=C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\smart-todo\\validation-artifacts\\phase7-20260605-01\\before-repair\\checks/pytest-cli-contract.xml\"",
+      "expected": {
+        "errors": 0,
+        "exit_code": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests_collected": ">0",
+        "xfails": 0
+      },
+      "name": "pytest_cli_contract",
+      "observed": {
+        "error": null,
+        "errors": 0,
+        "exit_code": 0,
+        "failures": 0,
+        "required_report_present": true,
+        "skipped": 0,
+        "tests_collected": 26,
+        "xfails": 0
+      },
+      "output_artifacts": {
+        "junit_report": "before-repair/checks/pytest-cli-contract.xml",
+        "stderr_binary": "before-repair/checks/pytest_cli_contract.stderr.bin",
+        "stderr_text": "before-repair/checks/pytest_cli_contract.stderr.txt",
+        "stdout_binary": "before-repair/checks/pytest_cli_contract.stdout.bin",
+        "stdout_text": "before-repair/checks/pytest_cli_contract.stdout.txt"
+      },
+      "passed": true,
+      "tool_version": "3.13.2",
+      "working_directory": "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\smart-todo"
+    }
+  ],
+  "configuration_sha256": "183ca75fcdcb09a8307293973c4f54081a475fb6809da2ad6ca9f5fbdd5ad4d9",
+  "created_at_utc": "2026-11-11T19:17:14+00:00",
+  "integrity_gates": {},
+  "overall": "FAIL",
+  "phase": "initial",
+  "preflight_passed": true,
+  "project_root": "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\smart-todo",
+  "python_executable": "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\.venv\\Scripts\\python.exe",
+  "repair_status": "Initial validation; no repair attempted.",
+  "run_id": "phase7-20260605-01",
+  "tool_versions": {
+    "bandit": {
+      "argv": [
+        "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\.venv\\Scripts\\bandit.exe",
+        "--version"
+      ],
+      "command": "\"C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\.venv\\Scripts\\bandit.exe\" --version",
+      "error": null,
+      "exit_code": 0,
+      "expected_version": "1.9.4",
+      "observed_version": "1.9.4",
+      "output_files": {
+        "stderr_binary": "version-bandit.stderr.bin",
+        "stderr_text": "version-bandit.stderr.txt",
+        "stdout_binary": "version-bandit.stdout.bin",
+        "stdout_text": "version-bandit.stdout.txt"
+      },
+      "passed": true,
+      "working_directory": "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\smart-todo"
+    },
+    "pytest": {
+      "argv": [
+        "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "--version"
+      ],
+      "command": "\"C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\.venv\\Scripts\\python.exe\" -m pytest --version",
+      "error": null,
+      "exit_code": 0,
+      "expected_version": "9.2.0",
+      "observed_version": "9.2.0",
+      "output_files": {
+        "stderr_binary": "version-pytest.stderr.bin",
+        "stderr_text": "version-pytest.stderr.txt",
+        "stdout_binary": "version-pytest.stdout.bin",
+        "stdout_text": "version-pytest.stdout.txt"
+      },
+      "passed": true,
+      "working_directory": "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\smart-todo"
+    },
+    "python": {
+      "argv": [
+        "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\.venv\\Scripts\\python.exe",
+        "--version"
+      ],
+      "command": "\"C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\.venv\\Scripts\\python.exe\" --version",
+      "error": null,
+      "exit_code": 0,
+      "expected_version": ">=3.11",
+      "observed_version": "3.13.2",
+      "output_files": {
+        "stderr_binary": "version-python.stderr.bin",
+        "stderr_text": "version-python.stderr.txt",
+        "stdout_binary": "version-python.stdout.bin",
+        "stdout_text": "version-python.stdout.txt"
+      },
+      "passed": true,
+      "working_directory": "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\smart-todo"
+    },
+    "requirements_pins": {
+      "error": null,
+      "expected": {
+        "bandit": "1.9.4",
+        "pytest": "9.2.0",
+        "ruff": "0.17.4"
+      },
+      "observed": {
+        "bandit": "1.9.4",
+        "pytest": "9.2.0",
+        "ruff": "0.17.4"
+      },
+      "passed": true
+    },
+    "ruff": {
+      "argv": [
+        "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\.venv\\Scripts\\ruff.exe",
+        "--version"
+      ],
+      "command": "\"C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\.venv\\Scripts\\ruff.exe\" --version",
+      "error": null,
+      "exit_code": 0,
+      "expected_version": "0.17.4",
+      "observed_version": "0.17.4",
+      "output_files": {
+        "stderr_binary": "version-ruff.stderr.bin",
+        "stderr_text": "version-ruff.stderr.txt",
+        "stdout_binary": "version-ruff.stdout.bin",
+        "stdout_text": "version-ruff.stdout.txt"
+      },
+      "passed": true,
+      "working_directory": "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\smart-todo"
+    }
+  },
+  "validator_sha256": "1f086fdf35d395929be939e8dd58870faef831d3dd880334c71ca28056a7356c",
+  "working_directory": "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\smart-todo"
+}

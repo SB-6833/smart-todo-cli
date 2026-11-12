@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "next_id": 6,
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Manual acceptance walkthrough",
+      "priority": "Medium",
+      "status": "In Progress",
+      "tags": [
+        "walkthrough"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Urgent assignment work",
+      "priority": "Low",
+      "status": "Pending",
+      "tags": [
+        "College"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Prepare assignment demo video",
+      "priority": "High",
+      "status": "Pending",
+      "tags": [
+        "Assignment"
+      ]
+    }
+  ]
+}

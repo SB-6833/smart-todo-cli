@@ -1,0 +1,13 @@
+/tasks.json
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.nox/
+.tox/
+.venv/
+venv/

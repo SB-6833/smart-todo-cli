@@ -1,0 +1,167 @@
+{
+  "check_configuration_sha256": "183ca75fcdcb09a8307293973c4f54081a475fb6809da2ad6ca9f5fbdd5ad4d9",
+  "check_templates": [
+    {
+      "argv": [
+        "<python>",
+        "-m",
+        "compileall",
+        "-q",
+        "smart_todo",
+        "tests"
+      ],
+      "expected": {
+        "exit_code": 0
+      },
+      "name": "python_compileall"
+    },
+    {
+      "argv": [
+        "<ruff>",
+        "check",
+        "--output-format",
+        "json",
+        "smart_todo",
+        "tests"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "findings": 0
+      },
+      "name": "ruff_lint"
+    },
+    {
+      "argv": [
+        "<bandit>",
+        "-r",
+        "smart_todo",
+        "--format",
+        "json"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "findings": 0
+      },
+      "name": "bandit_security"
+    },
+    {
+      "argv": [
+        "<python>",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/unit",
+        "--junitxml=<RUN_DIR>/pytest-unit.xml"
+      ],
+      "expected": {
+        "errors": 0,
+        "exit_code": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests_collected": ">0",
+        "xfails": 0
+      },
+      "name": "pytest_unit"
+    },
+    {
+      "argv": [
+        "<python>",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/cli",
+        "tests/contract",
+        "--junitxml=<RUN_DIR>/pytest-cli-contract.xml"
+      ],
+      "expected": {
+        "errors": 0,
+        "exit_code": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests_collected": ">0",
+        "xfails": 0
+      },
+      "name": "pytest_cli_contract"
+    }
+  ],
+  "command_timeout_seconds": 600,
+  "environment": {
+    "overrides": {
+      "NO_COLOR": "1",
+      "PYTEST_ADDOPTS": "",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "PYTHONHASHSEED": "0",
+      "PYTHONIOENCODING": "utf-8"
+    },
+    "removed_keys": [
+      "PYTHONPATH",
+      "PYTEST_PLUGINS"
+    ]
+  },
+  "expected_tool_versions": {
+    "bandit": "1.9.4",
+    "pytest": "9.2.0",
+    "ruff": "0.17.4"
+  },
+  "policy_file_hashes": {
+    ".gitignore": {
+      "sha256": "828011ede5cfa2d1875632aafcb7facf504f2bf9cd68756563127e18be123ccd",
+      "size_bytes": 145
+    },
+    ".specify/memory/constitution.md": {
+      "sha256": "86c8da2e7eb1c853c3dc4cae0e18d5d6b1a7043f33a4241a4289cba95d259247",
+      "size_bytes": 4365
+    },
+    "pyproject.toml": {
+      "sha256": "d32cc106cd1ad3bde50037807b442135d9eba8009ce97c1f3965bac92201372f",
+      "size_bytes": 360
+    },
+    "requirements-dev.txt": {
+      "sha256": "d9bc378f2dbac05b233aacb4946173e6a124a379d30d15262a8d44631120b3c4",
+      "size_bytes": 44
+    },
+    "specs/001-smart-todo-cli/plan.md": {
+      "sha256": "99d7229723fc77047e6398b8d0d98f77b210ee1f53d07883c80fcfafed65c2f9",
+      "size_bytes": 18364
+    },
+    "specs/001-smart-todo-cli/quickstart.md": {
+      "sha256": "4d82b9e9e6f4ed4da3acf9c64ee5d35450041ef08f6b0c7841cb23dcba920859",
+      "size_bytes": 5002
+    },
+    "specs/001-smart-todo-cli/spec.md": {
+      "sha256": "910f9cd7b88dfc5c5fcdd0d496c388f80e4605063dd28a72d7aa0bf43398163a",
+      "size_bytes": 9853
+    },
+    "specs/001-smart-todo-cli/tasks.md": {
+      "sha256": "943467b816684de2a5d88a202beccca28fd3601dee6c059dc53c99b208afcd01",
+      "size_bytes": 13785
+    }
+  },
+  "project_root": "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\smart-todo",
+  "python": {
+    "executable": "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\.venv\\Scripts\\python.exe",
+    "minimum_version": "3.11",
+    "observed_version": "3.13.2"
+  },
+  "requirements_dev_pins": {
+    "bandit": "1.9.4",
+    "pytest": "9.2.0",
+    "ruff": "0.17.4"
+  },
+  "requirements_pin_error": null,
+  "resolved_tool_executables": {
+    "bandit": "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\.venv\\Scripts\\bandit.exe",
+    "ruff": "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\.venv\\Scripts\\ruff.exe"
+  },
+  "test_data_policy": "Pytest fixtures use temporary directories; terminal contract tests use isolated temporary project copies; the harness supplies no task data and excludes the project-root tasks.json from snapshots.",
+  "test_file_hashes": {
+    "tests/cli/test_cli.py": "1a006771e7d61b4fd0af18485c816b6163135dbc685ca5f45bdc982911b7410a",
+    "tests/contract/test_task_file_contract.py": "bf2cbbf6b774650a1807e7f1586096ef23e5966c250f732761b9fbbab0726cec",
+    "tests/contract/test_terminal_contract.py": "40e1b70fbabc7f746e5aa5a184e2803e0258154958fa53fd17c2e17940bc793c",
+    "tests/unit/test_service.py": "ee40ba89762e246adb6f6015888be51e80e6067057d135ec18723e826344612e",
+    "tests/unit/test_storage.py": "e15405178ec9a54f8abbcb39c8f87ea27240f600307eb1da5e51ab09b4027a57",
+    "tests/unit/test_validation.py": "9b6873c84bd02a68a13d9cf884e804186b6e4e928fb54bd46878d491070d8e4e"
+  },
+  "validator_sha256": "1f086fdf35d395929be939e8dd58870faef831d3dd880334c71ca28056a7356c",
+  "working_directory": "C:\\Users\\Sindhura Botla\\Documents\\Mtech\\AISDLC\\smart-todo"
+}
